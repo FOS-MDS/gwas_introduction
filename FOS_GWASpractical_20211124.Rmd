@@ -17,11 +17,15 @@ developed to support genetic association analysis. Details about rvtests can be 
 # 2. INSTRUCTIONS
 For this practical there are 2 assessment files:
 FOS_GWASpractical_20211124.html
-This file you will use to follow the practical, while you use the RMD file to run code that is required to answer the questions.
 FOS_GWASpractical_20211124.RMD
-Please, add your name and date on the top of this file where it says "Insert your name here"and "Insert the date here" and save a personalized version of the RMD file with your answers. Please insert the answers wherever you see the **A.** in this file.
-At the end of the practical, please push the publish button that you can see on the top and save the file as an .html. Finally, you will need to upload your personal .html file including all answers to Turnitin on Brightspace.
 
+You will use the html file to follow the practical, while you use the RMD file to run code that is required to answer the questions.
+Open the .html file on your browser by clicking over "FOS_GWASpractical_20211124.html" in the Files window of RStudio (bottom right) and pressing "View in Web Browser".
+
+Please, add your name, email and date on top of this file where it says "Insert your name here", "Insert your email here" and "Insert the date here" and reply to the questions with your answers wherever you see the **A.**.
+At the end of the practical, please save this RMD file and upload this RMD file with the answers to Turnitin on Brightspace.
+
+Load the libraries required for the practicals:
 ```{r libraries, echo=F ,results=F}
 library (data.table)  
 library(gap)  
@@ -227,6 +231,8 @@ mhtplot(results1[,c("chr","pos","p")],ops,xlab="chromosomes",ylab="-log p-value"
 axis(2,at=1:round(max(-log10(results1$p))))
 abline(h=5,col="grey",lty=1) 
 abline(h=-log10(0.00000005),col="dark green",lty=1) 
+rm(results1)
+gc()
 ```
 
 **EXCERCISES**
