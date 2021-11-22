@@ -1,6 +1,7 @@
 ---
 title: "FOS 2021 GENOME-WIDE ASSOCIATION ANALYSIS PRACTICAL"
 author: "Insert your name here"
+email: "Insert your email here"
 date: "Insert the date here"
 
 output: html_notebook
