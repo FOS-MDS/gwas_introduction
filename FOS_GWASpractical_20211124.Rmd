@@ -37,11 +37,11 @@ library(gap)
 
 ### 3.1 PHENOTYPE DATA
 ```{r phenotypes}
-pheno <- read.table ("Mydata.pheno", header=TRUE, stringsAsFactors=F)
+pheno <- read.table ("/cloud/project/data/Mydata.pheno", header=TRUE, stringsAsFactors=F)
 dim (pheno)
 head (pheno)
 
-covar <- read.table ("Mydata.covar", header=TRUE, stringsAsFactors=F)
+covar <- read.table ("/cloud/project/data/Mydata.covar", header=TRUE, stringsAsFactors=F)
 dim (covar)
 head (covar)
 ```
@@ -101,11 +101,11 @@ Open Mydata.vcf file in R and answer the questions.
 
 ```{r}
 # Read header of the file
-vcf_header <- readLines("Mydata.vcf")
+vcf_header <- readLines("/cloud/project/data/Mydata.vcf")
 head(vcf_header)
   
 # Read the file
-vcf <- fread ("Mydata.vcf")
+vcf <- fread ("/cloud/project/data/Mydata.vcf")
 head (vcf)
 
 ```
@@ -155,7 +155,7 @@ webpage)?\
 
 ## 6. INSPECTION OF OUTPUT FILES
 ```{r load results}
-results <- read.table (gzfile("Myresults.txt.gz"),header=TRUE, stringsAsFactors=F)
+results <- read.table (gzfile("/cloud/project/results/Myresults.txt.gz"),header=TRUE, stringsAsFactors=F)
 
 results[1:5,1:16]
 ```
